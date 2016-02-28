@@ -9,17 +9,17 @@
 import UIKit
 
 class ViewController: UIViewController {
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        let ab = RippleView(frame: CGRectMake(0, 50, 100 ,400))
+        self.view.addSubview(ab)
+        
+        let cd = RippleView(frame: CGRectMake(100, 50, 100 ,400))
+        self.view.addSubview(cd)
+        
+        let ef = RippleView(frame: CGRectMake(200, 50, 100 ,400))
+        self.view.addSubview(ef)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
 }
 

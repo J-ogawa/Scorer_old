@@ -14,6 +14,8 @@
 		EF1203211C7B6DA000E438EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF12031F1C7B6DA000E438EE /* LaunchScreen.storyboard */; };
 		EF12032C1C7B6DA000E438EE /* ScorerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF12032B1C7B6DA000E438EE /* ScorerTests.swift */; };
 		EF1203371C7B6DA000E438EE /* ScorerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1203361C7B6DA000E438EE /* ScorerUITests.swift */; };
+		EFC7AE5E1C81524A004746B3 /* RippleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC7AE5D1C81524A004746B3 /* RippleView.swift */; };
+		EFC7AE601C82E62B004746B3 /* DayTimeLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC7AE5F1C82E62B004746B3 /* DayTimeLineView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		EF1203321C7B6DA000E438EE /* ScorerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScorerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF1203361C7B6DA000E438EE /* ScorerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScorerUITests.swift; sourceTree = "<group>"; };
 		EF1203381C7B6DA000E438EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EFC7AE5D1C81524A004746B3 /* RippleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RippleView.swift; sourceTree = "<group>"; };
+		EFC7AE5F1C82E62B004746B3 /* DayTimeLineView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayTimeLineView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,8 @@
 			children = (
 				EF1203161C7B6DA000E438EE /* AppDelegate.swift */,
 				EF1203181C7B6DA000E438EE /* ViewController.swift */,
+				EFC7AE5D1C81524A004746B3 /* RippleView.swift */,
+				EFC7AE5F1C82E62B004746B3 /* DayTimeLineView.swift */,
 				EF12031A1C7B6DA000E438EE /* Main.storyboard */,
 				EF12031D1C7B6DA000E438EE /* Assets.xcassets */,
 				EF12031F1C7B6DA000E438EE /* LaunchScreen.storyboard */,
@@ -193,6 +199,7 @@
 				TargetAttributes = {
 					EF1203121C7B6D9F00E438EE = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = CCJG3K7264;
 					};
 					EF1203261C7B6DA000E438EE = {
 						CreatedOnToolsVersion = 7.2;
@@ -256,7 +263,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFC7AE601C82E62B004746B3 /* DayTimeLineView.swift in Sources */,
 				EF1203191C7B6DA000E438EE /* ViewController.swift in Sources */,
+				EFC7AE5E1C81524A004746B3 /* RippleView.swift in Sources */,
 				EF1203171C7B6DA000E438EE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -399,10 +408,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Scorer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.debussynetwork.Scorer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -410,10 +422,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Scorer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.debussynetwork.Scorer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -484,6 +499,7 @@
 				EF12033D1C7B6DA000E438EE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EF12033E1C7B6DA000E438EE /* Build configuration list for PBXNativeTarget "ScorerTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +508,7 @@
 				EF1203401C7B6DA000E438EE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EF1203411C7B6DA000E438EE /* Build configuration list for PBXNativeTarget "ScorerUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +517,7 @@
 				EF1203431C7B6DA000E438EE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
