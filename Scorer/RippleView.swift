@@ -43,17 +43,17 @@ class RippleView: UIView {
         return UIColor(colorLiteralRed: 1 - score, green: score, blue: 0.0, alpha: 1.0)
     }
 
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        begin((touches.first?.locationInView(self))!)
-    }
-
-    override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        move((touches.first?.locationInView(self))!)
-    }
-
-    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        end()
-    }
+//    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+//        begin((touches.first?.locationInView(self))!)
+//    }
+//
+//    override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
+//        move((touches.first?.locationInView(self))!)
+//    }
+//
+//    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
+//        end()
+//    }
 
     func begin(point: CGPoint) {
         scoreVector = !scoreVector
