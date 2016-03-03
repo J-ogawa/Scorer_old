@@ -9,6 +9,7 @@
 import UIKit
 
 class RippleView: UIView {
+    var symbol: String = ""
     var score: Float = 0.0;
     weak var timer: NSTimer?
     var firstRipple: UIView?
@@ -56,6 +57,7 @@ class RippleView: UIView {
 //    }
 
     func begin(point: CGPoint) {
+        print("")
         scoreVector = !scoreVector
         firstRipple = generateRipple(point)
         timer = NSTimer.scheduledTimerWithTimeInterval(0.05, target: self, selector: "addScore", userInfo: nil, repeats: true)

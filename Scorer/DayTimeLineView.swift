@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ReactKit
 
 class DayTimeLineView: UIView {
     
@@ -17,7 +18,30 @@ class DayTimeLineView: UIView {
     // Drawing code
     }
     */
+    
     var score: Float = 0
+    
+    
+//    required init(coder aDecoder: NSCoder) {
+//        
+//    }
+//    
+//    required override init(frame: CGRect) {
+//        self.obj1Stream = KVO.stream(obj1, "value")
+//        
+//        // bind stream via KVC (`<~` as binding operator)
+//        (obj2, "value") <~ self.obj1Stream
+//        
+//        XCTAssertEqual(obj1.value, "initial")
+//        XCTAssertEqual(obj2.value, "initial")
+//        
+//        obj1.value = "REACT"
+//        
+//        XCTAssertEqual(obj1.value, "REACT")
+//        XCTAssertEqual(obj2.value, "REACT")
+//        
+//    }
+    
     
     
     func lastSubView(point: CGPoint) -> RippleView? {
@@ -31,8 +55,10 @@ class DayTimeLineView: UIView {
         let point: CGPoint! = touches.first?.locationInView(self)
         print("------- begin 1")
         let view: RippleView? = lastSubView(point)
+        
+        if (view != nil) { (self, "score") <~ KVO.stream(view!, "score") }
+        
          print("------- begin 2")
-        if (view != nil) { score = (view?.score)! }
         view?.begin((view?.convertPoint(point, fromView: self))!)
     }
     
