@@ -17,6 +17,8 @@ class DayTimeLineView: UIView {
     // Drawing code
     }
     */
+    var score: Float = 0
+    
     
     func lastSubView(point: CGPoint) -> RippleView? {
         return (subviews
@@ -30,6 +32,7 @@ class DayTimeLineView: UIView {
         print("------- begin 1")
         let view: RippleView? = lastSubView(point)
          print("------- begin 2")
+        if (view != nil) { score = (view?.score)! }
         view?.begin((view?.convertPoint(point, fromView: self))!)
     }
     
@@ -38,6 +41,7 @@ class DayTimeLineView: UIView {
        // print("touches \(touches)")
         let point: CGPoint! = touches.first?.locationInView(self)
         let view = lastSubView(point)
+        view?.score = score
         view?.move((convertPoint(point, toView: view)))
     }
     
