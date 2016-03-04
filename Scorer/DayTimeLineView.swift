@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import ReactKit
+//import ReactKit
 
 class DayTimeLineView: UIView {
     
@@ -56,8 +56,11 @@ class DayTimeLineView: UIView {
         print("------- begin 1")
         let view: RippleView? = lastSubView(point)
         
-        if (view != nil) { (self, "score") <~ KVO.stream(view!, "score") }
-        
+       // if (view != nil) { (self, "score") <~ KVO.stream(view!, "score") }
+        view?.scoreObj.observe { value in
+            print("Hi! \(value)")
+            self.score = Float(value)
+        }
          print("------- begin 2")
         view?.begin((view?.convertPoint(point, fromView: self))!)
     }

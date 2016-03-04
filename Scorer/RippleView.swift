@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ReactiveKit
 
 class RippleView: UIView {
     var symbol: String = ""
@@ -15,6 +16,7 @@ class RippleView: UIView {
     var firstRipple: UIView?
     var lastRipple: UIView?
     var scoreVector: Bool = false
+    let scoreObj = Observable(0.0)
 
     required init(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -28,6 +30,7 @@ class RippleView: UIView {
 
     func addScore() {
         score += 0.05 * (scoreVector ? (1.0) : (-1.0))
+        scoreObj.value += 0.05
         if score > 1 {
             score = 1
             scoreVector = !scoreVector

@@ -1,1 +1,3 @@
-github "ReactKit/ReactKit"
+github "ReactiveKit/ReactiveKit"
+github "ReactiveKit/ReactiveUIKit"
+github "ReactiveKit/ReactiveFoundation"
